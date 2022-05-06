@@ -1,0 +1,48 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PatrolEnemy : MonoBehaviour
+{
+    [SerializeField]
+    private float movementSpeed = 0f;
+    private Rigidbody patrolRB;
+    private GameObject player;
+    [SerializeField]
+    private float reactDistance = 40f;
+
+    void Start()
+    {
+        patrolRB = GetComponent<Rigidbody>();
+        player = GameObject.Find("Player");
+    }
+
+    void Update()
+    {
+        float distance = Vector3.Distance(player.transform.position, transform.position);
+        Vector3 lookDirection;
+
+        Vector3 targetPos = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
+
+        if (distance <= reactDistance)
+        {
+            if(distance > 5)
+            {
+                targetPos.z += (distance / 2f);
+
+            }
+            lookDirection = (targetPos - transform.position).normalized;
+            patrolRB.AddForce(lookDirection * movementSpeed);
+        }
+        else
+        {
+            lookDirection = (targetPos - transform.position).normalized;
+            patrolRB.AddForce(lookDirection * movementSpeed * 0.2f);
+        }
+
+        if ((transform.position.z - player.transform.position.z) < -3f)
+        {
+            Destroy(this);
+        }
+    }
+}
