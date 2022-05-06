@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PatrolEnemy : MonoBehaviour
+public class HunterEnemy : MonoBehaviour
 {
     [SerializeField]
     private float movementSpeed = 0f;
-    private Rigidbody patrolRB;
+    private Rigidbody huntRB;
     private GameObject player;
     [SerializeField]
     private float reactDistance = 40f;
 
     void Start()
     {
-        patrolRB = GetComponent<Rigidbody>();
+        huntRB = GetComponent<Rigidbody>();
         player = GameObject.Find("Player");
     }
 
@@ -26,18 +26,18 @@ public class PatrolEnemy : MonoBehaviour
 
         if (distance <= reactDistance)
         {
-            if(distance > 5)
+            if (distance > 5)
             {
                 targetPos.z += (distance / 2f);
 
             }
             lookDirection = (targetPos - transform.position).normalized;
-            patrolRB.AddForce(lookDirection * movementSpeed);
+            huntRB.AddForce(lookDirection * movementSpeed);
         }
         else
         {
             lookDirection = (targetPos - transform.position).normalized;
-            patrolRB.AddForce(lookDirection * movementSpeed * 0.2f);
+            huntRB.AddForce(lookDirection * movementSpeed * 0.2f);
         }
 
         if ((transform.position.z - player.transform.position.z) < -3f)
