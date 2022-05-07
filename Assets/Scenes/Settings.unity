@@ -268,7 +268,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -306,6 +306,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4079199652824212208, guid: e28566e04246377469f6a1d8d818d046, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1237807841}
+    - target: {fileID: 4079199652824212208, guid: e28566e04246377469f6a1d8d818d046, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4079199652824212209, guid: e28566e04246377469f6a1d8d818d046, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4079199652824212209, guid: e28566e04246377469f6a1d8d818d046, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 4079199652824212209, guid: e28566e04246377469f6a1d8d818d046, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 4079199652824212211, guid: e28566e04246377469f6a1d8d818d046, type: 3}
       propertyPath: m_Pivot.x
       value: 0

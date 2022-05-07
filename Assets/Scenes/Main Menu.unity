@@ -175,7 +175,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -389,6 +389,26 @@ PrefabInstance:
     - target: {fileID: 6331954182676806617, guid: 27a730069c14bf9489d93b424749d112, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954182676806618, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1063124834}
+    - target: {fileID: 6331954182676806618, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954182676806619, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954182676806619, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954182676806619, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 6331954182676806621, guid: 27a730069c14bf9489d93b424749d112, type: 3}
       propertyPath: m_Name
