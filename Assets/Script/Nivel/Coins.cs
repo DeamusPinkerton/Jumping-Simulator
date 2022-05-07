@@ -5,7 +5,7 @@ using UnityEngine;
 public class Coins : MonoBehaviour
 {
     public float SpeedTurn = 90f;
-    public GameManager gameManager;
+    public GameManager GameManager;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,7 +13,7 @@ public class Coins : MonoBehaviour
         {
             return;
         }
-        gameManager.GetCoin();
+        GameManager.GetCoin();
         Destroy(gameObject);
     }
 
