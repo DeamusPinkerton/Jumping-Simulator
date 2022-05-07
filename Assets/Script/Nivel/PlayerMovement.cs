@@ -8,10 +8,10 @@ public class PlayerMovement : MonoBehaviour
     bool alive = true;
     public float Speed = 5;
     public Rigidbody rb;
-
+    public bool onGround = true;
     float horizontalInput;
     public float horizontalMultiplier = 2;
-
+    public float jumpForce = 5.5f;
     Animator Animator;
     int IsDead;
 
@@ -28,11 +28,23 @@ public class PlayerMovement : MonoBehaviour
         Vector3 horizontalMove = transform.right * horizontalInput * Speed * Time.fixedDeltaTime * horizontalMultiplier;
         rb.MovePosition(rb.position + forwardMove + horizontalMove);
         Animator.SetBool("IsDead", false);
+
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.name == "Plane")
+        {
+            onGround = true;
+        }
     }
     private void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
-
+        if (Input.GetButtonDown("Jump") && onGround)
+        {
+            rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
+            onGround = false;
+        }
     }
 
     public void Die()

@@ -5,17 +5,16 @@ using UnityEngine;
 public class Coins : MonoBehaviour
 {
     public float SpeedTurn = 90f;
+    public GameManager gameManager;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name != "Player")
         {
             return;
         }
+        gameManager.GetCoin();
         Destroy(gameObject);
-    }
-    void Start()
-    {
-        
     }
 
     void Update()
