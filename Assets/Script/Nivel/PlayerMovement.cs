@@ -14,11 +14,13 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce = 5.5f;
     Animator Animator;
     int IsDead;
+    int IsJumping;
 
     private void Start()
     {
         Animator = GetComponent<Animator>();
         IsDead = Animator.StringToHash("IsDead");
+        IsJumping = Animator.StringToHash("IsJumping");
     }
     private void FixedUpdate()
     {
@@ -28,7 +30,6 @@ public class PlayerMovement : MonoBehaviour
         Vector3 horizontalMove = transform.right * horizontalInput * Speed * Time.fixedDeltaTime * horizontalMultiplier;
         rb.MovePosition(rb.position + forwardMove + horizontalMove);
         Animator.SetBool("IsDead", false);
-
     }
     private void OnCollisionEnter(Collision collision)
     {
