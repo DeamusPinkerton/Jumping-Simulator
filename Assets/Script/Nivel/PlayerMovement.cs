@@ -15,12 +15,16 @@ public class PlayerMovement : MonoBehaviour
     Animator Animator;
     int IsDead;
     int IsJumping;
+    int IsLanding;
+    int IsFalling;
 
     private void Start()
     {
         Animator = GetComponent<Animator>();
         IsDead = Animator.StringToHash("IsDead");
         IsJumping = Animator.StringToHash("IsJumping");
+        IsJumping = Animator.StringToHash("IsLanding");
+        IsJumping = Animator.StringToHash("IsFalling");
     }
     private void FixedUpdate()
     {
@@ -36,6 +40,8 @@ public class PlayerMovement : MonoBehaviour
         if(collision.gameObject.name == "Plane")
         {
             onGround = true;
+            Animator.SetBool("IsFalling", false);
+            Animator.SetBool("IsLanding", true);
         }
     }
     private void Update()
@@ -45,6 +51,13 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
             onGround = false;
+            Animator.SetBool("IsJumping", true);
+            Animator.SetBool("IsLanding", false);
+            Animator.SetBool("IsFalling", true);
+        }
+        else
+        {
+            Animator.SetBool("IsJumping", false);
         }
     }
 
