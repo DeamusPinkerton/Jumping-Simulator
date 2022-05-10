@@ -17,7 +17,7 @@ public class GroundTile : MonoBehaviour
         GroundSpawner = GameObject.FindObjectOfType<SpawnGround>();
         VoidSpawn();
         ObstacleSpawn();
-        int PickupChance = Random.Range(0, 10);
+        int PickupChance = Random.Range(0, 100);
         if (PickupChance == 1)
         {
             PowerUpSpawn();
