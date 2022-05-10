@@ -6,8 +6,7 @@ public class Debris : MonoBehaviour
 {
     private Rigidbody debrisRB;
     private GameObject player;
-    [SerializeField]
-    private float reactDistance = 30f;
+    [SerializeField] private float reactDistance = 30f;
 
     void Start()
     {

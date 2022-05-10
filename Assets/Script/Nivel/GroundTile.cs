@@ -6,7 +6,12 @@ public class GroundTile : MonoBehaviour
 {
     SpawnGround GroundSpawner;
     Coins SpawnCoin;
-
+    public GameObject ObstaclePrefab;
+    public GameObject CoinPrefab;
+    public GameObject PwrUpPrefab;
+    public GameObject EnemyPrefab;
+    public GameObject DebrisPrefab;
+    public GameObject VoidPrefab;
     void Start()
     {
         GroundSpawner = GameObject.FindObjectOfType<SpawnGround>();
@@ -51,12 +56,7 @@ public class GroundTile : MonoBehaviour
         
     }
 
-    public GameObject ObstaclePrefab;
-    public GameObject CoinPrefab;
-    public GameObject PwrUpPrefab;
-    public GameObject EnemyPrefab;
-    public GameObject DebrisPrefab;
-    public GameObject VoidPrefab;
+
 
     void ObstacleSpawn()
     {
@@ -113,13 +113,4 @@ public class GroundTile : MonoBehaviour
         Instantiate(VoidPrefab, SpawnPoint.position, Quaternion.identity, transform);
     }
 
-    // public GameObject CoinPrefab;
-    // void CoinSpawn()
-    // {
-    //int CoinsToSpawn = 10;
-    // for (int i = 0; i < CoinsToSpawn; i++)
-    //{
-    //GameObject temp = Instantiate(CoinPrefab);
-    //
-    // }
 }
