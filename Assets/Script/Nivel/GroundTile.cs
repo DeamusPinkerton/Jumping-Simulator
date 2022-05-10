@@ -12,7 +12,15 @@ public class GroundTile : MonoBehaviour
         GroundSpawner = GameObject.FindObjectOfType<SpawnGround>();
         VoidSpawn();
         ObstacleSpawn();
-        CoinSpawn();
+        int PickupChance = Random.Range(0, 10);
+        if (PickupChance == 1)
+        {
+            PowerUpSpawn();
+        }
+        else
+        {
+            CoinSpawn();
+        }
         int EnemyChance = Random.Range(0, 6);
         if (EnemyChance == 1)
         {
@@ -45,6 +53,7 @@ public class GroundTile : MonoBehaviour
 
     public GameObject ObstaclePrefab;
     public GameObject CoinPrefab;
+    public GameObject PwrUpPrefab;
     public GameObject EnemyPrefab;
     public GameObject DebrisPrefab;
     public GameObject VoidPrefab;
@@ -63,6 +72,14 @@ public class GroundTile : MonoBehaviour
         Transform SpawnPoint = transform.GetChild(ObstacleSpawnIndex).transform;
 
         Instantiate(CoinPrefab, SpawnPoint.position, Quaternion.identity, transform);
+    }
+
+    void PowerUpSpawn()
+    {
+        int ObstacleSpawnIndex = Random.Range(5, 8);
+        Transform SpawnPoint = transform.GetChild(ObstacleSpawnIndex).transform;
+
+        Instantiate(PwrUpPrefab, SpawnPoint.position, Quaternion.identity, transform);
     }
 
     void EnemySpawn()
