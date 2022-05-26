@@ -18,7 +18,7 @@ public class GroundTile : MonoBehaviour
         VoidSpawn();
         ObstacleSpawn();
         int PickupChance = Random.Range(0, 100);
-        if (PickupChance == 1)
+        if (PickupChance <= 3)
         {
             PowerUpSpawn();
         }
