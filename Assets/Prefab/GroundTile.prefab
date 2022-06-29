@@ -364,10 +364,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcf1e4b69e83ea14480c103043463ddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObstaclePrefab: {fileID: 6065218748727710515, guid: 150479b775d25e4429fa85917611e345, type: 3}
+  ObstaclePrefab: {fileID: 5348908028339190989, guid: 14583ced0e29df24faafa089222a6a00, type: 3}
   CoinPrefab: {fileID: 8598527917639462839, guid: e6131db48ba8ec947ab33004be9e394e, type: 3}
   PwrUpPrefab: {fileID: 8397133018706059544, guid: 343a92e4c322b394e8c2fe1a18d86081, type: 3}
-  EnemyPrefab: {fileID: 4255313498222345954, guid: c8b63596bb22a4f4c888133a1e87c47a, type: 3}
+  EnemyPrefab: {fileID: 5493885041635273558, guid: 9a3d140735c00f249a579afb142b9251, type: 3}
   DebrisPrefab: {fileID: 7746126560812746276, guid: 342c0186ebb447d40a05b7e36af8ed9a, type: 3}
   VoidPrefab: {fileID: 7448698029974794317, guid: 2ad70dca92ecdd44f9fe0451957ef766, type: 3}
 --- !u!1 &5377449143507284163
