@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TextoDeMuerte : MonoBehaviour
+public class TextoDeMuerte : MonoBehaviour //TP2 - Roman A Martinez
 {
     Color defaultColor;
     Text text;

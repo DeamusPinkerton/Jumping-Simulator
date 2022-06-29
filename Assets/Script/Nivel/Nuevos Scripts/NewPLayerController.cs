@@ -11,8 +11,8 @@ public class NewPLayerController : EntityManager
     public float jumpForce = 5.5f;
 
 
-    delegate void DestroyRB();
-    DestroyRB DestroyRb;
+    delegate void DestroyRB();//TP2 - Juan Calace
+    DestroyRB DestroyRb;//TP2 - Juan Calace
 
     public Rigidbody _rigidbody2;
     Animator _animator;
@@ -65,14 +65,14 @@ public class NewPLayerController : EntityManager
     public void Die()
     {
         _animations.Dead1();
-        DestroyRb = destroyRb;
+        DestroyRb = destroyRb;//TP2 - Juan Calace
         MovementSpeed = 0;
         alive = false;
         Invoke("Restart", 2);
     }
-    void destroyRb()
+    void destroyRb()//TP2 - Juan Calace
     {
-        Object.Destroy(_rigidbody2);
+        Object.Destroy(_rigidbody2);//TP2 - Juan Calace
     }
     void Restart()
     {
