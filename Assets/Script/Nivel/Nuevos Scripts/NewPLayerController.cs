@@ -10,8 +10,6 @@ public class NewPLayerController : EntityManager
     public float horizontalMultiplier = 2;
     public float jumpForce = 5.5f;
 
-    public delegate void PlayerKill();
-    public static PlayerKill OnPlayerKill;
 
     delegate void DestroyRB();
     DestroyRB DestroyRb;
@@ -68,7 +66,6 @@ public class NewPLayerController : EntityManager
     {
         _animations.Dead1();
         DestroyRb = destroyRb;
-        OnPlayerKill?.Invoke();
         MovementSpeed = 0;
         alive = false;
         Invoke("Restart", 2);
