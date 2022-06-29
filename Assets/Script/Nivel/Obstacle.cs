@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
-    PlayerMovement playerMovement;
+    NewPLayerController NewPLayerController;
     private void Start()
     {
-        playerMovement = GameObject.FindObjectOfType<PlayerMovement>();
+        NewPLayerController = GameObject.FindObjectOfType<NewPLayerController>();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name == "Player")
         {
-            playerMovement.Die();
+            //playerMovement.Die();
+            NewPLayerController.Die();
         }
     }
 

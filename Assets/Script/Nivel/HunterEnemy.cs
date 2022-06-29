@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HunterEnemy : MonoBehaviour
+public class HunterEnemy : EntityManager
 {
-    [SerializeField]
-    private float movementSpeed = 0f;
     private Rigidbody huntRB;
     private GameObject player;
     [SerializeField]
@@ -31,12 +29,12 @@ public class HunterEnemy : MonoBehaviour
 
             }
             lookDirection = (targetPos - transform.position).normalized;
-            huntRB.AddForce(lookDirection * movementSpeed);
+            huntRB.AddForce(lookDirection * MovementSpeed);
         }
         else
         {
             lookDirection = (targetPos - transform.position).normalized;
-            huntRB.AddForce(lookDirection * movementSpeed * 0.2f);
+            huntRB.AddForce(lookDirection * MovementSpeed * 0.2f);
         }
 
         if ((transform.position.z - player.transform.position.z) < -3f)

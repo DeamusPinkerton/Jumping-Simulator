@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1854795280215184908}
   - component: {fileID: 9002784328280767288}
   - component: {fileID: 9036508178769049729}
+  - component: {fileID: -5156194345911231229}
   m_Layer: 0
   m_Name: Debris
   m_TagString: Untagged
@@ -123,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005fa4cf1fef48743a11e477b66cda8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 1
+  MovementSpeed: 0
   reactDistance: 15
 --- !u!54 &9002784328280767288
 Rigidbody:
@@ -154,3 +155,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reactDistance: 32
+--- !u!114 &-5156194345911231229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7746126560812746276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4936a35a23224844195724c99f9e7b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
