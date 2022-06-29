@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1854795280215184908}
   - component: {fileID: 9002784328280767288}
   - component: {fileID: 9036508178769049729}
-  - component: {fileID: -5156194345911231229}
+  - component: {fileID: -6916204056500805736}
   m_Layer: 0
   m_Name: Debris
   m_TagString: Untagged
@@ -102,8 +102,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f13b697019242f42966e41ba338ae83, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1854795280215184908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,8 +114,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 005fa4cf1fef48743a11e477b66cda8f, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   MovementSpeed: 0
   reactDistance: 15
 --- !u!54 &9002784328280767288
@@ -144,9 +144,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf52d06f79a59fa4f8292cf5482c6ecc, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   reactDistance: 32
+--- !u!114 &-6916204056500805736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7746126560812746276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4936a35a23224844195724c99f9e7b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8321744955385835697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -212,7 +224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 7019f725a02701d41b7f6a1c3f161a9d, type: 3}
       propertyPath: m_Materials.Array.data[0]
-      value:
+      value: 
       objectReference: {fileID: 2100000, guid: 53d087f938b33074e8aa7d68c33293ec, type: 2}
     - target: {fileID: 919132149155446097, guid: 7019f725a02701d41b7f6a1c3f161a9d, type: 3}
       propertyPath: m_Name

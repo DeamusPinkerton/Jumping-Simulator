@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: -8219588778863243882}
   - component: {fileID: 7427425965568909034}
   - component: {fileID: 8006811849695741077}
+  - component: {fileID: 6753556953905802849}
   m_Layer: 0
   m_Name: TV
   m_TagString: Untagged
@@ -154,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005fa4cf1fef48743a11e477b66cda8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 15
+  MovementSpeed: 15
   reactDistance: 40
 --- !u!54 &7427425965568909034
 Rigidbody:
@@ -186,3 +187,15 @@ CapsuleCollider:
   m_Height: 0.5171167
   m_Direction: 0
   m_Center: {x: 0.0114318635, y: 0.1478814, z: -0.004302302}
+--- !u!114 &6753556953905802849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5493885041635273558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4936a35a23224844195724c99f9e7b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

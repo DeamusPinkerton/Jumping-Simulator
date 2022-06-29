@@ -160,7 +160,7 @@ MonoBehaviour:
   MovementSpeed: 10
   onGround: 1
   horizontalMultiplier: 1.5
-  jumpForce: 6
+  jumpForce: 7
   _rigidbody2: {fileID: 4186205}
 --- !u!82 &4186202
 AudioSource:
@@ -1023,7 +1023,6 @@ GameObject:
   - component: {fileID: 634745728}
   - component: {fileID: 634745727}
   - component: {fileID: 634745726}
-  - component: {fileID: 634745725}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -1031,19 +1030,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &634745725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 634745724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfda36bab259291489dbb0ffcf8c964f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Text: {fileID: 2023874162}
 --- !u!114 &634745726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3204,7 +3190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfda36bab259291489dbb0ffcf8c964f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text: {fileID: 0}
 --- !u!114 &2023874165
 MonoBehaviour:
   m_ObjectHideFlags: 0
