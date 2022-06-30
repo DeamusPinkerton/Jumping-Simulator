@@ -18,6 +18,6 @@ public class MenuCreditos : MonoBehaviour
     }
     public void EscenaMenuPrinc()
     {
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene(0);
     }
 }

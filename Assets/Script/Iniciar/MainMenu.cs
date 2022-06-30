@@ -18,15 +18,15 @@ public class MainMenu : MonoBehaviour
 
     public void EscenaIniciar()
     {
-        SceneManager.LoadScene("Endless Runner");
+        SceneManager.LoadScene(1);
     }
     public void EscenaInstrucciones()
     {
-        SceneManager.LoadScene("Settings");
+        SceneManager.LoadScene(2);
     }
     public void EscenaCreditos()
     {
-        SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene(3);
     }
     public void Exit()
     {

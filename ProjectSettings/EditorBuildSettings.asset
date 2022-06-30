@@ -12,15 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Endless Runner.unity
     guid: e0db21373d98c0d47a915244c99d75de
   - enabled: 1
-    path: Assets/Scenes/Victory.unity
-    guid: d9c0a65ebae0954489438d06bafba600
-  - enabled: 1
-    path: Assets/Scenes/Defeat.unity
-    guid: 7554ecf33159c1948a48a530bd466658
+    path: Assets/Scenes/Settings.unity
+    guid: 174651a9c297f09449e2b34b707a6e29
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 06732acd10c6bd1499d98fd9ff7c7663
-  - enabled: 1
-    path: Assets/Scenes/Settings.unity
-    guid: 174651a9c297f09449e2b34b707a6e29
   m_configObjects: {}
