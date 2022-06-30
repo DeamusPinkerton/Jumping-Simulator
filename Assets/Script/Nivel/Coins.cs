@@ -6,6 +6,11 @@ public class Coins : MonoBehaviour
 {
     public float SpeedTurn = 90f;
 
+    void Start()
+    {
+        transform.Rotate(-90, 0, 0);
+    }
+
     void Update()
     {
         transform.Rotate(0, 0, SpeedTurn * Time.deltaTime);
