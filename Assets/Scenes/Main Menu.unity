@@ -306,6 +306,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2154209937608470825, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954180939207936, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954180939207936, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954180939207936, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954180939207936, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954180939207936, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ClipClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954180939207936, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UIEffect, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954180939207936, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6331954180939207937, guid: 27a730069c14bf9489d93b424749d112, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -322,6 +354,34 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331954181118421621, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954181118421621, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954181118421621, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954181118421621, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954181118421621, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ClipClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954181118421621, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UIEffect, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954181118421621, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6331954181118421622, guid: 27a730069c14bf9489d93b424749d112, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -337,6 +397,34 @@ PrefabInstance:
     - target: {fileID: 6331954181118421622, guid: 27a730069c14bf9489d93b424749d112, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954181645559685, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954181645559685, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954181645559685, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954181645559685, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954181645559685, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ClipClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954181645559685, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UIEffect, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954181645559685, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6331954181645559686, guid: 27a730069c14bf9489d93b424749d112, type: 3}
       propertyPath: m_Pivot.x
@@ -357,6 +445,34 @@ PrefabInstance:
     - target: {fileID: 6331954181645559686, guid: 27a730069c14bf9489d93b424749d112, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 220.00002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954182132666626, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954182132666626, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954182132666626, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954182132666626, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954182132666626, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ClipClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954182132666626, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UIEffect, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331954182132666626, guid: 27a730069c14bf9489d93b424749d112, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6331954182132666627, guid: 27a730069c14bf9489d93b424749d112, type: 3}
       propertyPath: m_Pivot.x

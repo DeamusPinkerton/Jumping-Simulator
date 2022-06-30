@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2600864238197671779}
   - component: {fileID: 756538276790498431}
   - component: {fileID: 4832632972203600503}
+  - component: {fileID: 2984981948837346190}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Coin
@@ -110,3 +111,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpeedTurn: 90
+--- !u!114 &2984981948837346190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8598527917639462839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e612acdd508eb4499bf25ee72cba1d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PickUpEffect: {fileID: 7400984767157096020, guid: fe92fbed49dae534695bb7f5b8dd65ed, type: 3}
+  PickUpStonkEffect: {fileID: 0}
