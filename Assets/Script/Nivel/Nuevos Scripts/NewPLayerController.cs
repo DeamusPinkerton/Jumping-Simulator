@@ -9,6 +9,8 @@ public class NewPLayerController : EntityManager
     float horizontalInput;
     public float horizontalMultiplier = 2;
     public float jumpForce = 5.5f;
+    public AudioClip[] audios;
+    public AudioSource audioPlayer;
 
 
     delegate void DestroyRB();//TP2 - Juan Calace
@@ -16,7 +18,6 @@ public class NewPLayerController : EntityManager
 
     public Rigidbody _rigidbody2;
     Animator _animator;
-
     Animations _animations;
     private void Awake()
     {
@@ -25,6 +26,7 @@ public class NewPLayerController : EntityManager
     }
     void Start()
     {
+        audioPlayer = this.GetComponent<AudioSource>();
         _animations = new Animations(_animator);
         _animations.Start();
     }
@@ -56,6 +58,8 @@ public class NewPLayerController : EntityManager
             _animations.Jumping1();
             _animations.Landing0();
             _animations.Falling1();
+            audioPlayer.clip = audios[0];
+            audioPlayer.Play();
         }
         else
         {
@@ -68,6 +72,8 @@ public class NewPLayerController : EntityManager
         DestroyRb = destroyRb;//TP2 - Juan Calace
         MovementSpeed = 0;
         alive = false;
+        audioPlayer.clip = audios[1];
+        audioPlayer.Play();
         Invoke("Restart", 2);
     }
     void destroyRb()//TP2 - Juan Calace
