@@ -8,7 +8,7 @@ public class NewPLayerController : EntityManager
     public bool onGround = true;
     float horizontalInput;
     public float horizontalMultiplier = 2;
-    public float jumpForce = 5.5f;
+    public float jumpForce;
     public AudioClip[] audios;
     public AudioSource audioPlayer;
 

@@ -12,7 +12,7 @@ public class HunterEnemy : EntityManager
     void Start()
     {
         huntRB = GetComponent<Rigidbody>();
-        player = GameObject.Find("Player");
+        player = GameObject.FindWithTag("Player");
     }
     private void FixedUpdate()
     {
@@ -25,7 +25,7 @@ public class HunterEnemy : EntityManager
         {
             if (distance > 5)
             {
-                targetPos.z += (distance / 2f);
+                targetPos.z += (distance *0.5f);
 
             }
             lookDirection = (targetPos - transform.position).normalized;

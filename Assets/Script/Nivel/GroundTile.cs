@@ -44,7 +44,7 @@ public class GroundTile : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if(other.gameObject.name == "Player")
+        if(other.gameObject.tag == "Player")
         { 
             GroundSpawner.SpawnTile();
             Destroy(gameObject, 2);

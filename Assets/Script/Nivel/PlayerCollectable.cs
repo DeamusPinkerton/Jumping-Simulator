@@ -39,24 +39,24 @@ public class PlayerCollectable : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Coin")
-        {
-            coin = other.gameObject;
-            audioPlayer.clip = audios[0];
-            audioPlayer.Play();
-            Destroy(coin);
-            CallCanvas();
-        }
-        if (other.gameObject.tag == "Stonks")
-        {
-            coin = other.gameObject;
-            audioPlayer.clip = audios[1];
-            audioPlayer.Play();
-            Destroy(coin);
-            Stonks = true;
-            StonksUp = 0;
-            StonksBoost.SetActive(true);
-        }
+            if (other.gameObject.tag == "Coin")
+            {
+                coin = other.gameObject;
+                audioPlayer.clip = audios[0];
+                audioPlayer.Play();
+                Destroy(coin);
+                CallCanvas();
+            }
+            if (other.gameObject.tag == "Stonks")
+            {
+                coin = other.gameObject;
+                audioPlayer.clip = audios[1];
+                audioPlayer.Play();
+                Destroy(coin);
+                Stonks = true;
+                StonksUp = 0;
+                StonksBoost.SetActive(true);
+            }
     }
 
     void CallCanvas()

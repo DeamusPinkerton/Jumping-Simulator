@@ -11,7 +11,7 @@ public class Debris : MonoBehaviour
     void Start()
     {
         debrisRB = GetComponent<Rigidbody>();
-        player = GameObject.Find("Player");
+        player = GameObject.FindWithTag("Player");
     }
 
     void Update()

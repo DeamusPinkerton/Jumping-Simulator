@@ -15,6 +15,10 @@ public class MainMenu : MonoBehaviour
     {
         
     }
+    public void EscenaMenuPrinc()
+    {
+        SceneManager.LoadScene(0);
+    }
 
     public void EscenaIniciar()
     {
