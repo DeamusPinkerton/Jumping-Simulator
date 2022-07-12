@@ -41,7 +41,7 @@ public class PlayerCollectable : EntityManager
         base.Collectable(type);
         if (type == 1)
         {
-            Coin();
+            PickUP();
         }
         else if(type == 2)
         {
@@ -49,7 +49,7 @@ public class PlayerCollectable : EntityManager
         }
 
     }
-     void Coin()
+     void PickUP()
     {
         audioPlayer.clip = audios[0];
         audioPlayer.Play();
