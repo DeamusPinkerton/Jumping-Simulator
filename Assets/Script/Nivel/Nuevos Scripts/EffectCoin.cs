@@ -10,6 +10,7 @@ public class EffectCoin : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Instantiate(PickUpEffect, transform.position, transform.rotation);
+            Destroy(gameObject);
         }
     }
 }

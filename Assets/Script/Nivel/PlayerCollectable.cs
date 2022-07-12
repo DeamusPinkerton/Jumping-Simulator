@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerCollectable : MonoBehaviour
+public class PlayerCollectable : EntityManager
 {
     public GameObject coin;
     public Text CoinText;
@@ -21,7 +21,7 @@ public class PlayerCollectable : MonoBehaviour
 
     void Update()
     {
-        CoinText.text = Coins.ToString();
+        //CoinText.text = Coins.ToString();
     }
 
     void FixedUpdate()
@@ -36,31 +36,37 @@ public class PlayerCollectable : MonoBehaviour
             }
         }
     }
-
-    private void OnTriggerEnter(Collider other)
+    public override void Collectable(int type)
     {
-            if (other.gameObject.tag == "Coin")
-            {
-                coin = other.gameObject;
-                audioPlayer.clip = audios[0];
-                audioPlayer.Play();
-                Destroy(coin);
-                CallCanvas();
-            }
-            if (other.gameObject.tag == "Stonks")
-            {
-                coin = other.gameObject;
-                audioPlayer.clip = audios[1];
-                audioPlayer.Play();
-                Destroy(coin);
-                Stonks = true;
-                StonksUp = 0;
-                StonksBoost.SetActive(true);
-            }
+        base.Collectable(type);
+        if (type == 1)
+        {
+            Coin();
+        }
+        else if(type == 2)
+        {
+            powerup();
+        }
+
+    }
+     void Coin()
+    {
+        audioPlayer.clip = audios[0];
+        audioPlayer.Play();
+        CallCanvas();
+    }
+    void powerup()
+    {
+        audioPlayer.clip = audios[1];
+        audioPlayer.Play();
+        Stonks = true;
+        StonksUp = 0;
+        StonksBoost.SetActive(true);
     }
 
     void CallCanvas()
     {
+        CoinText.text = Coins.ToString();
         Coins++;
         if (Stonks)
         {

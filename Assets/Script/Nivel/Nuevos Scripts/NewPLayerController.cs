@@ -19,6 +19,7 @@ public class NewPLayerController : EntityManager
     public Rigidbody _rigidbody2;
     Animator _animator;
     Animations _animations;
+    //Motions _motions;
     private void Awake()
     {
         _rigidbody2 = GetComponent<Rigidbody>();
@@ -28,12 +29,13 @@ public class NewPLayerController : EntityManager
     {
         audioPlayer = this.GetComponent<AudioSource>();
         _animations = new Animations(_animator);
+        //_motions = new Motions(transform, _rigidbody2, jumpForce);
         _animations.Start();
     }
     private void FixedUpdate()
     {
         if (!alive) return;
-
+        //_motions.Move();
         Vector3 forwardMove = transform.forward * MovementSpeed * Time.fixedDeltaTime;
         Vector3 horizontalMove = transform.right * horizontalInput * MovementSpeed * Time.fixedDeltaTime * horizontalMultiplier;
         _rigidbody2.MovePosition(_rigidbody2.position + forwardMove + horizontalMove);
@@ -54,6 +56,7 @@ public class NewPLayerController : EntityManager
         if (Input.GetButtonDown("Jump") && onGround)
         {
             _rigidbody2.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
+            //_motions.jump();
             onGround = false;
             _animations.Jumping1();
             _animations.Landing0();
@@ -71,6 +74,7 @@ public class NewPLayerController : EntityManager
         _animations.Dead1();
         DestroyRb = destroyRb;//TP2 - Juan Calace
         MovementSpeed = 0;
+        //_motions.Dead();
         alive = false;
         audioPlayer.clip = audios[1];
         audioPlayer.Play();
@@ -79,6 +83,17 @@ public class NewPLayerController : EntityManager
     void destroyRb()//TP2 - Juan Calace
     {
         Object.Destroy(_rigidbody2);//TP2 - Juan Calace
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Coin")
+        {
+            GetComponent<EntityManager>().Collectable (1);
+        }
+        if (other.gameObject.tag == "Stonks")
+        {
+            GetComponent<EntityManager>().Collectable (2);
+        }
     }
     void Restart()
     {

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2865591557351426508}
   - component: {fileID: 694473422441626320}
   - component: {fileID: 4669237194723517656}
+  - component: {fileID: 7884205378378413146}
   m_Layer: 0
   m_Name: Stonks
   m_TagString: Stonks
@@ -110,3 +111,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpeedTurn: 90
+--- !u!114 &7884205378378413146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8397133018706059544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e612acdd508eb4499bf25ee72cba1d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PickUpEffect: {fileID: 7400984767157096020, guid: 1f4e404d71bb5a94e8c87906209a4bbc, type: 3}
