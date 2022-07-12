@@ -19,11 +19,6 @@ public class PlayerCollectable : EntityManager
         audioPlayer = this.GetComponent<AudioSource>();
     }
 
-    void Update()
-    {
-        //CoinText.text = Coins.ToString();
-    }
-
     void FixedUpdate()
     {
         if (Stonks)
