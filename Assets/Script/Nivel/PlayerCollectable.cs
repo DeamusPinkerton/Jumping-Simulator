@@ -61,11 +61,11 @@ public class PlayerCollectable : EntityManager
 
     void CallCanvas()
     {
-        CoinText.text = Coins.ToString();
         Coins++;
         if (Stonks)
         {
             Coins++;
-        }   
+        }
+        CoinText.text = Coins.ToString();
     }
 }
