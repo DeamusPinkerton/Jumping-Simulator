@@ -31,7 +31,7 @@ public class PlayerCollectable : ColectableEntity
             }
         }
     }
-    public override void Collectable(int type) //TPFinal - Roman A Martinez Cristaldo
+    public override void Collectable(int type) //TPFinal - Juan Manuel Calace
     {
         base.Collectable(type);
         if (type == 1)
@@ -44,7 +44,7 @@ public class PlayerCollectable : ColectableEntity
         }
 
     }
-     void PickUP() //TPFinal - Roman A Martinez Cristaldo
+     void PickUP() //TPFinal - Juan Manuel Calace
     {
         audioPlayer.clip = audios[0];
         audioPlayer.Play();
@@ -57,7 +57,7 @@ public class PlayerCollectable : ColectableEntity
             CallCanvas(add: 1);
         }
     }
-    void powerup() //TPFinal - Roman A Martinez Cristaldo
+    void powerup() //TPFinal - Juan Manuel Calace
     {
         audioPlayer.clip = audios[1];
         audioPlayer.Play();
@@ -66,7 +66,7 @@ public class PlayerCollectable : ColectableEntity
         StonksBoost.SetActive(true);
     }
 
-    void CallCanvas(int add) //TPFinal - Roman A Martinez Cristaldo
+    void CallCanvas(int add) //TPFinal - Juan Manuel Calace
     {
         Coins += add;
         CoinText.text = Coins.ToString();

@@ -81,7 +81,7 @@ public class NewPLayerController : EntityManager
     {
         Object.Destroy(_rigidbody2);
     }
-    private void OnTriggerEnter(Collider other) //TPFinal - Roman A Martinez Cristaldo
+    private void OnTriggerEnter(Collider other) //TPFinal - Juan Manuel Calace
     {
         if (other.gameObject.tag == "Coin")
         {
