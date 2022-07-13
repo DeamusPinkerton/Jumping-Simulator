@@ -48,7 +48,14 @@ public class PlayerCollectable : EntityManager
     {
         audioPlayer.clip = audios[0];
         audioPlayer.Play();
-        CallCanvas();
+        if (Stonks == true)
+        {
+            CallCanvas(add: 2);
+        }
+        else
+        {
+            CallCanvas(add: 1);
+        }
     }
     void powerup()
     {
@@ -59,13 +66,13 @@ public class PlayerCollectable : EntityManager
         StonksBoost.SetActive(true);
     }
 
-    void CallCanvas()
+    void CallCanvas(int add)
     {
-        Coins++;
-        if (Stonks)
-        {
-            Coins++;
-        }
+        Coins += add;
+        //if (Stonks)
+        //{
+        //    Coins++;
+        //}
         CoinText.text = Coins.ToString();
     }
 }
