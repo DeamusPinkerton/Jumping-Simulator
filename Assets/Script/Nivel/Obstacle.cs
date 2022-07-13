@@ -13,7 +13,7 @@ public class Obstacle : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         var player = collision.gameObject.GetComponent<EntityManager>();
-        if (player!= null && collision.gameObject.tag == "Player")
+        if (player!= null)
         {
             player.Damage(1);
             TriggerDesactive();

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Debris : EntityManager
 {
-    private Rigidbody debrisRB;
-    private GameObject player;
+    //private Rigidbody debrisRB;
+    //private GameObject player;
 
     void Start()
     {
-        debrisRB = GetComponent<Rigidbody>();
+        RB = GetComponent<Rigidbody>();
         player = GameObject.FindWithTag("Player");
     }
 
@@ -19,7 +19,7 @@ public class Debris : EntityManager
 
         if (distance <= reactDistance)
         {
-            debrisRB.useGravity = true;
+            RB.useGravity = true;
         }
 
         if ((transform.position.z - player.transform.position.z) < -3f)

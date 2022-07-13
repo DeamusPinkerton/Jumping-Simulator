@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class HunterEnemy : EntityManager
 {
-    private Rigidbody huntRB;
-    private GameObject player;
-
     void Start()
     {
-        huntRB = GetComponent<Rigidbody>();
+        RB = GetComponent<Rigidbody>();
         player = GameObject.FindWithTag("Player");
     }
     private void FixedUpdate()
@@ -27,12 +24,12 @@ public class HunterEnemy : EntityManager
 
             }
             lookDirection = (targetPos - transform.position).normalized;
-            huntRB.AddForce(lookDirection * MovementSpeed);
+            RB.AddForce(lookDirection * MovementSpeed);
         }
         else
         {
             lookDirection = (targetPos - transform.position).normalized;
-            huntRB.AddForce(lookDirection * MovementSpeed * 0.2f);
+            RB.AddForce(lookDirection * MovementSpeed * 0.2f);
         }
 
         if ((transform.position.z - player.transform.position.z) < -3f)
