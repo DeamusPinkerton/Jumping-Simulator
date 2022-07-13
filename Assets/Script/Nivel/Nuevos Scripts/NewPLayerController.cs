@@ -65,6 +65,7 @@ public class NewPLayerController : EntityManager
             _animations.Jumping0();
         }
     }
+
     public void Die()
     {
         _animations.Dead1();
@@ -83,13 +84,14 @@ public class NewPLayerController : EntityManager
     {
         if (other.gameObject.tag == "Coin")
         {
-            GetComponent<EntityManager>().Collectable (1);
+            GetComponent<ColectableEntity>().Collectable (1);
         }
         if (other.gameObject.tag == "Stonks")
         {
-            GetComponent<EntityManager>().Collectable (2);
+            GetComponent<ColectableEntity>().Collectable (2);
         }
     }
+
     void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

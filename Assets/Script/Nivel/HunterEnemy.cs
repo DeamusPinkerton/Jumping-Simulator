@@ -6,8 +6,6 @@ public class HunterEnemy : EntityManager
 {
     private Rigidbody huntRB;
     private GameObject player;
-    [SerializeField]
-    private float reactDistance = 40f;
 
     void Start()
     {

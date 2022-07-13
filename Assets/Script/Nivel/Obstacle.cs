@@ -25,10 +25,4 @@ public class Obstacle : MonoBehaviour
     {
         _collider.isTrigger = false;
     }    
-
-
-    void Update()
-    {
-        
-    }
 }

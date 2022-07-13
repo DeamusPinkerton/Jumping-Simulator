@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerCollectable : EntityManager
+public class PlayerCollectable : ColectableEntity
 {
     public GameObject coin;
     public Text CoinText;
-    public int Coins = 0;
+    public int CoolDown;
+    [SerializeField] int Coins = 0;
     private bool Stonks = false;
-    [SerializeField]
-    private float StonksUp = 0;
+    [SerializeField] private float StonksUp = 0;
     public GameObject StonksBoost;
     public AudioClip[] audios;
     public AudioSource audioPlayer;
     private void Start()
     {
-        audioPlayer = this.GetComponent<AudioSource>();
+        audioPlayer.GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -24,7 +24,7 @@ public class PlayerCollectable : EntityManager
         if (Stonks)
         {
             StonksUp++;
-            if (StonksUp >= 500)
+            if (StonksUp >= CoolDown)
             {
                 Stonks = false;
                 StonksBoost.SetActive(false);
@@ -69,10 +69,6 @@ public class PlayerCollectable : EntityManager
     void CallCanvas(int add)
     {
         Coins += add;
-        //if (Stonks)
-        //{
-        //    Coins++;
-        //}
         CoinText.text = Coins.ToString();
     }
 }

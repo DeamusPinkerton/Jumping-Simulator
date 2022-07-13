@@ -50,14 +50,6 @@ public class GroundTile : MonoBehaviour
             Destroy(gameObject, 2);
         }
     }
-
-    private void Update()
-    {
-        
-    }
-
-
-
     void ObstacleSpawn()
     {
         int ObstacleSpawnIndex = Random.Range(2, 5);
