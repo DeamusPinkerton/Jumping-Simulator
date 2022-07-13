@@ -16,7 +16,7 @@ public class PlayerCollectable : ColectableEntity
     public AudioSource audioPlayer;
     private void Start()
     {
-        audioPlayer.GetComponent<AudioSource>();
+        audioPlayer = this.GetComponent<AudioSource>();
     }
 
     void FixedUpdate()

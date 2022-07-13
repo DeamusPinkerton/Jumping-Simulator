@@ -11,6 +11,7 @@ public class NewPLayerController : EntityManager
     public float jumpForce;
     public AudioClip[] audios;
     public AudioSource audioPlayer;
+    private int _life = 1;
 
 
     delegate void DestroyRB();//TP2 - Juan Calace
@@ -89,6 +90,15 @@ public class NewPLayerController : EntityManager
         if (other.gameObject.tag == "Stonks")
         {
             GetComponent<ColectableEntity>().Collectable (2);
+        }
+    }
+    public override void Damage(int dmg)
+    {
+        base.Damage(dmg);
+        _life -= dmg;
+        if (_life <= 0)
+        {
+            Die();
         }
     }
 

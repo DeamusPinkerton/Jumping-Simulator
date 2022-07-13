@@ -5,18 +5,17 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     private Collider _collider;
-    NewPLayerController NewPLayerController;
     private void Start()
     {
         _collider = GetComponent<Collider>();
-        NewPLayerController = GameObject.FindObjectOfType<NewPLayerController>();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        var player = collision.gameObject.GetComponent<EntityManager>();
+        if (player!= null && collision.gameObject.tag == "Player")
         {
-            NewPLayerController.Die();
+            player.Damage(1);
             TriggerDesactive();
         }
     }

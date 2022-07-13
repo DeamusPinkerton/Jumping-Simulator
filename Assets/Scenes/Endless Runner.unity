@@ -158,6 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovementSpeed: 10
+  reactDistance: 40
   onGround: 1
   horizontalMultiplier: 2
   jumpForce: 7
@@ -274,7 +275,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeb01a84ec4dd0840ab47271de4089c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 0
   coin: {fileID: 8598527917639462839, guid: e6131db48ba8ec947ab33004be9e394e, type: 3}
   CoinText: {fileID: 783028582}
   CoolDown: 500
@@ -1548,6 +1548,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 3347703248008140954, guid: e70d6ed80b9c15f4ba526e2a4315f4ab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1592356538}
+    - target: {fileID: 3347703248008140954, guid: e70d6ed80b9c15f4ba526e2a4315f4ab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EscenaMenuPrinc
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e70d6ed80b9c15f4ba526e2a4315f4ab, type: 3}
 --- !u!1 &1151211418
@@ -2165,7 +2173,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeb01a84ec4dd0840ab47271de4089c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 0
   coin: {fileID: 8598527917639462839, guid: e6131db48ba8ec947ab33004be9e394e, type: 3}
   CoinText: {fileID: 783028582}
   CoolDown: 0
