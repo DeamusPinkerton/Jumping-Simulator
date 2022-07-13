@@ -14,8 +14,8 @@ public class NewPLayerController : EntityManager
     private int _life = 1;
 
 
-    delegate void DestroyRB();//TP2 - Juan Calace
-    DestroyRB DestroyRb;//TP2 - Juan Calace
+    delegate void DestroyRB();
+    DestroyRB DestroyRb;
 
     public Rigidbody _rigidbody2;
     Animator _animator;
@@ -70,18 +70,18 @@ public class NewPLayerController : EntityManager
     public void Die()
     {
         _animations.Dead1();
-        DestroyRb = destroyRb;//TP2 - Juan Calace
+        DestroyRb = destroyRb;
         MovementSpeed = 0;
         alive = false;
         audioPlayer.clip = audios[1];
         audioPlayer.Play();
         Invoke("Restart", 2);
     }
-    void destroyRb()//TP2 - Juan Calace
+    void destroyRb()
     {
-        Object.Destroy(_rigidbody2);//TP2 - Juan Calace
+        Object.Destroy(_rigidbody2);
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other) //TPFinal - Roman A Martinez Cristaldo
     {
         if (other.gameObject.tag == "Coin")
         {
@@ -92,7 +92,7 @@ public class NewPLayerController : EntityManager
             GetComponent<ColectableEntity>().Collectable (2);
         }
     }
-    public override void Damage(int dmg)
+    public override void Damage(int dmg) //TPFinal - Roman A Martinez Cristaldo
     {
         base.Damage(dmg);
         _life -= dmg;

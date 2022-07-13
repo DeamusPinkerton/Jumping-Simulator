@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class Debris : EntityManager
 {
-    //private Rigidbody debrisRB;
-    //private GameObject player;
-
     void Start()
     {
         RB = GetComponent<Rigidbody>();
@@ -22,7 +19,7 @@ public class Debris : EntityManager
             RB.useGravity = true;
         }
 
-        if ((transform.position.z - player.transform.position.z) < -3f)
+        if ((transform.position.z - player.transform.position.z) < MinDist)
         {
             Destroy(this);
         }

@@ -20,7 +20,7 @@ public class HunterEnemy : EntityManager
         {
             if (distance > 5)
             {
-                targetPos.z += (distance *0.5f);
+                targetPos.z += (distance * 0.5f);
 
             }
             lookDirection = (targetPos - transform.position).normalized;
@@ -32,7 +32,7 @@ public class HunterEnemy : EntityManager
             RB.AddForce(lookDirection * MovementSpeed * 0.2f);
         }
 
-        if ((transform.position.z - player.transform.position.z) < -3f)
+        if ((transform.position.z - player.transform.position.z) < MinDist)
         {
             Destroy(this);
         }

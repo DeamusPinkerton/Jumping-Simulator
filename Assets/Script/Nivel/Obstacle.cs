@@ -10,7 +10,7 @@ public class Obstacle : MonoBehaviour
         _collider = GetComponent<Collider>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision) //TPFinal - Roman A Martinez Cristaldo
     {
         var player = collision.gameObject.GetComponent<EntityManager>();
         if (player!= null)
