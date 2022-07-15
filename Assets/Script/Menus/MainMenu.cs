@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public AudioClip[] audios;
+    public AudioSource audioPlayer;
     void Start()
     {
+        audioPlayer = this.GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -35,5 +36,11 @@ public class MainMenu : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
+    }
+    public void ClipClick()
+    {
+        audioPlayer.clip = audios[0];
+        audioPlayer.Play();
+
     }
 }
