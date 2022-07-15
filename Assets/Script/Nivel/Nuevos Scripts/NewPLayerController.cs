@@ -9,6 +9,10 @@ public class NewPLayerController : EntityManager
     float horizontalInput;
     public float horizontalMultiplier = 2;
     public float jumpForce;
+    public float Speedup;
+    private float Timelapse;
+    public float BaseTimelapse;
+    public float FMovementSpeed;
     public AudioClip[] audios;
     public AudioSource audioPlayer;
     private int _life = 1;
@@ -24,6 +28,8 @@ public class NewPLayerController : EntityManager
     {
         _rigidbody2 = GetComponent<Rigidbody>();
         _animator = GetComponent<Animator>();
+        Timelapse = BaseTimelapse;
+        FMovementSpeed = MovementSpeed;
     }
     void Start()
     {
@@ -34,10 +40,18 @@ public class NewPLayerController : EntityManager
     private void FixedUpdate()
     {
         if (!alive) return;
-        Vector3 forwardMove = transform.forward * MovementSpeed * Time.fixedDeltaTime;
+        Vector3 forwardMove = transform.forward * FMovementSpeed * Time.fixedDeltaTime;
         Vector3 horizontalMove = transform.right * horizontalInput * MovementSpeed * Time.fixedDeltaTime * horizontalMultiplier;
         _rigidbody2.MovePosition(_rigidbody2.position + forwardMove + horizontalMove);
         _animations.Dead0();
+
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -4.65f, 4.65f), transform.position.y, transform.position.z);
+
+        if (Time.timeSinceLevelLoad > Timelapse)
+        {
+            FMovementSpeed += Speedup;
+            Timelapse += 10;
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -91,6 +105,10 @@ public class NewPLayerController : EntityManager
         {
             GetComponent<ColectableEntity>().Collectable (2);
         }
+        if (other.gameObject.tag == "Apple")
+        {
+            GetComponent<ColectableEntity>().Collectable(3);
+        }
     }
     public override void Damage(int dmg) //TPFinal - Roman A Martinez Cristaldo
     {
@@ -100,6 +118,11 @@ public class NewPLayerController : EntityManager
         {
             Die();
         }
+    }
+
+    public void AddSpeed() //TPFinal - Juan Manuel Calace
+    {
+        FMovementSpeed += 2;
     }
 
     void Restart()

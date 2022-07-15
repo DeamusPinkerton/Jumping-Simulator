@@ -7,9 +7,13 @@ public class GroundTile : MonoBehaviour
     SpawnGround GroundSpawner;
     Coins SpawnCoin;
     public GameObject ObstaclePrefab;
+    public GameObject DumpsterPrefab;
+    public GameObject DispenserPrefab;
     public GameObject CoinPrefab;
+    public GameObject ApplePrefab;
     public GameObject PwrUpPrefab;
     public GameObject EnemyPrefab;
+    public GameObject TirePrefab;
     public GameObject DebrisPrefab;
     public GameObject VoidPrefab;
     void Start()
@@ -21,6 +25,10 @@ public class GroundTile : MonoBehaviour
         if (PickupChance <= 3)
         {
             PowerUpSpawn();
+        }
+        else if (PickupChance <= 6)
+        {
+            AppleSpawn();
         }
         else
         {
@@ -52,10 +60,28 @@ public class GroundTile : MonoBehaviour
     }
     void ObstacleSpawn()
     {
-        int ObstacleSpawnIndex = Random.Range(2, 5);
-        Transform SpawnPoint = transform.GetChild(ObstacleSpawnIndex).transform;
+        int ObstacleChance = Random.Range(0, 100);
+        if (ObstacleChance > 79)
+        {
+            int ObstacleSpawnIndex = Random.Range(2, 5);
+            Transform SpawnPoint = transform.GetChild(ObstacleSpawnIndex).transform;
 
-        Instantiate(ObstaclePrefab, SpawnPoint.position, Quaternion.identity, transform);
+            Instantiate(DumpsterPrefab, SpawnPoint.position, Quaternion.identity, transform);
+        }
+        else if (ObstacleChance > 10)
+        {
+            int ObstacleSpawnIndex = Random.Range(2, 5);
+            Transform SpawnPoint = transform.GetChild(ObstacleSpawnIndex).transform;
+
+            Instantiate(ObstaclePrefab, SpawnPoint.position, Quaternion.identity, transform);
+        }
+        else
+        {
+            int ObstacleSpawnIndex = Random.Range(2, 5);
+            Transform SpawnPoint = transform.GetChild(ObstacleSpawnIndex).transform;
+
+            Instantiate(DispenserPrefab, SpawnPoint.position, Quaternion.identity, transform);
+        }
     }
 
     void CoinSpawn()
@@ -74,12 +100,31 @@ public class GroundTile : MonoBehaviour
         Instantiate(PwrUpPrefab, SpawnPoint.position, Quaternion.identity, transform);
     }
 
-    void EnemySpawn()
+    void AppleSpawn()
     {
-        int ObstacleSpawnIndex = Random.Range(8, 10);
+        int ObstacleSpawnIndex = Random.Range(5, 8);
         Transform SpawnPoint = transform.GetChild(ObstacleSpawnIndex).transform;
 
-        Instantiate(EnemyPrefab, SpawnPoint.position, Quaternion.identity, transform);
+        Instantiate(ApplePrefab, SpawnPoint.position, Quaternion.identity, transform);
+    }
+
+    void EnemySpawn()
+    {
+        int ObstacleChance = Random.Range(0, 100);
+        if (ObstacleChance > 39)
+        {
+            int ObstacleSpawnIndex = Random.Range(8, 10);
+            Transform SpawnPoint = transform.GetChild(ObstacleSpawnIndex).transform;
+
+            Instantiate(EnemyPrefab, SpawnPoint.position, Quaternion.identity, transform);
+        }
+        else
+        {
+            int ObstacleSpawnIndex = Random.Range(8, 10);
+            Transform SpawnPoint = transform.GetChild(ObstacleSpawnIndex).transform;
+
+            Instantiate(TirePrefab, SpawnPoint.position, Quaternion.identity, transform);
+        }
     }
 
     void DebrisSpawn()

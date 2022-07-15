@@ -455,9 +455,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObstaclePrefab: {fileID: 5348908028339190989, guid: 14583ced0e29df24faafa089222a6a00, type: 3}
+  DumpsterPrefab: {fileID: 8121186336842807455, guid: 453f2dc14289e4b43ba4abb904f448f0, type: 3}
+  DispenserPrefab: {fileID: 8084360483684272579, guid: e7c2cc98b97456243b37daac54824253, type: 3}
   CoinPrefab: {fileID: 8598527917639462839, guid: e6131db48ba8ec947ab33004be9e394e, type: 3}
+  ApplePrefab: {fileID: 2057180111720687141, guid: 829778c265d59df4f8a19ae390fc4c45, type: 3}
   PwrUpPrefab: {fileID: 8397133018706059544, guid: 343a92e4c322b394e8c2fe1a18d86081, type: 3}
   EnemyPrefab: {fileID: 5493885041635273558, guid: 9a3d140735c00f249a579afb142b9251, type: 3}
+  TirePrefab: {fileID: 536603791079523285, guid: 7d4578be49bf3754c84c4d22571386db, type: 3}
   DebrisPrefab: {fileID: 7746126560812746276, guid: 342c0186ebb447d40a05b7e36af8ed9a, type: 3}
   VoidPrefab: {fileID: 7448698029974794317, guid: 2ad70dca92ecdd44f9fe0451957ef766, type: 3}
 --- !u!1 &5377449143507284163

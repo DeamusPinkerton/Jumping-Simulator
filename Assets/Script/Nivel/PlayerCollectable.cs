@@ -8,15 +8,20 @@ public class PlayerCollectable : ColectableEntity
     public GameObject coin;
     public Text CoinText;
     public int CoolDown;
+    public int NCoolDown;
     [SerializeField] int Coins = 0;
     private bool Stonks = false;
     [SerializeField] private float StonksUp = 0;
     public GameObject StonksBoost;
     public AudioClip[] audios;
     public AudioSource audioPlayer;
+    public GameObject player;
+    public Text ScoreText;
+
     private void Start()
     {
         audioPlayer = this.GetComponent<AudioSource>();
+        ScoreText.text = "Highscore: " + PlayerPrefs.GetInt("highscore").ToString();
     }
 
     void FixedUpdate()
@@ -38,13 +43,17 @@ public class PlayerCollectable : ColectableEntity
         {
             PickUP();
         }
-        else if(type == 2)
+        else if (type == 2)
         {
             powerup();
         }
+        else if (type == 3)
+        {
+            Apple();
+        }
 
     }
-     void PickUP() //TPFinal - Juan Manuel Calace
+    void PickUP() //TPFinal - Juan Manuel Calace
     {
         audioPlayer.clip = audios[0];
         audioPlayer.Play();
@@ -65,10 +74,29 @@ public class PlayerCollectable : ColectableEntity
         StonksUp = 0;
         StonksBoost.SetActive(true);
     }
+    void Apple() //TPFinal - Juan Manuel Calace
+    {
+        audioPlayer.clip = audios[2];
+        audioPlayer.Play();
+        if (Stonks == true)
+        {
+            CallCanvas(add: 20);
+        }
+        else
+        {
+            CallCanvas(add: 10);
+        }
+        player.GetComponent<NewPLayerController>().AddSpeed();
+    }
 
     void CallCanvas(int add) //TPFinal - Juan Manuel Calace
     {
         Coins += add;
         CoinText.text = Coins.ToString();
+        if (PlayerPrefs.GetInt("highscore") < Coins)
+        {
+            PlayerPrefs.SetInt("highscore", Coins);
+            ScoreText.text = "Highscore: " + PlayerPrefs.GetInt("highscore").ToString();
+        }
     }
 }
