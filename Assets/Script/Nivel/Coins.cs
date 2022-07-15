@@ -8,7 +8,7 @@ public class Coins : MonoBehaviour
 
     void Start()
     {
-        transform.Rotate(-90, 0, 0);
+        transform.Rotate(-45, 0, 0);
     }
 
     void Update()

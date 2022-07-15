@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2991540818608849943}
   - component: {fileID: 5232821561405659271}
   - component: {fileID: 5561882547748864187}
+  - component: {fileID: 1168087335783179320}
   m_Layer: 0
   m_Name: Explosion
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 6020123637057439438}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.4097373, y: 2.4097373, z: 2.4097373}
+  m_LocalScale: {x: 15.812981, y: 15.812981, z: 15.812981}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -121,3 +122,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f13b697019242f42966e41ba338ae83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1168087335783179320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6020123637057439438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af0e920b1511c6d48b86e53920e2cd86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Duration: 2
+  ExpEffect: {fileID: 0}

@@ -20,6 +20,7 @@ public class Dispenser : EntityManager
         {
             Transform SpawnPoint = transform.GetChild(1).transform;
             Instantiate(ExplodePrefab, SpawnPoint.position, Quaternion.identity, transform);
+            Destroy(this);
         }
 
         if ((transform.position.z - player.transform.position.z) < MinDist)
